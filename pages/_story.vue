@@ -51,7 +51,8 @@
       </div>
       <!-- All other (illegal) entries, except widemd. That option should remove the div.  -->
       <div v-else-if="!chapter.props.widemd">
-        <p> No image found for this chapter. Does the chapter tag for this story have a media key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} The following chapter types are available: `image`, `video`, `website`, `widemd`</p>
+        <p> No image found for this chapter. Does the chapter tag for this story have a media key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"}<br/>
+            The following chapter types are available: [image, video, website, widemd]</p>
       </div>
     </div>
   </div>
