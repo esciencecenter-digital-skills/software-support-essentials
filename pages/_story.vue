@@ -21,13 +21,15 @@
 
     <!-- Chapter description -->
     <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
-      <div class="p-4 w-1/3 bg-white rounded overflow-auto">
-        <nuxt-content :document="chapter" class="prose mb-6" />
-        <EditOnGitHub :target="gitHubURL()" />
-        <p class="prose italic">
-          For more information on editing stories, see <a href="https://blog.esciencecenter.nl/storyboards-for-science-communication-85e399e5c1b5" target="_blank">this blog post</a>.
-        </p>
+      <div v-if="chapter.props.widemd" class="p-4 w-full bg-white rounded overflow-auto" >
+        <div class="content-center" style="width:60%; margin:auto">
+            <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
+        </div>
       </div>
+      <div v-else class="p-4 w-1/3 bg-white rounded overflow-auto">
+        <nuxt-content :document="chapter" class="prose mb-6" />
+      </div>
+
       <!-- Chapter media -->
       <!-- Image options -->
       <div v-if="chapter.props.image" class="w-2/3 bg-white rounded">
@@ -45,11 +47,7 @@
       </div>
       <!-- Website (for example a hosted reveal.js presentation) -->
       <div v-else-if="chapter.props.website" class="w-2/3 bg-white rounded">
-        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="chapter.props.website" title="Website, for example a hosted reveal.js presentation" frameborder="0"></iframe>
-      </div>
-      <!-- Other options give an error -->
-      <div v-else class="object-contain w-full h-full max-w-full max-h-full mx-auto">
-        No valid media type was specified!
+        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="chapter.props.website" title="Website" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -99,4 +97,5 @@ export default {
     }
   }
 }
+
 </script>
