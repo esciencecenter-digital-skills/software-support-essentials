@@ -53,6 +53,7 @@
 import Reveal from 'reveal.js'
 import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 import RevealNotes from 'reveal.js/plugin/notes/notes.js'
+import RevealMath from 'reveal.js/plugin/math/math.js'
 
 export default {
   async asyncData ({ $content, params }) {
@@ -77,7 +78,7 @@ export default {
       hash: true,
       embedded: true,
       showNotes: true,
-      plugins: [ RevealMarkdown, RevealNotes ]
+      plugins: [ RevealMarkdown, RevealMath, RevealNotes ]
     })
     deck.initialize();
 
