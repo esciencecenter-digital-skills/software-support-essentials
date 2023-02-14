@@ -9,8 +9,8 @@
         Storyboard: {{ story.title }}
       </h1>
     </div>
+<!--
 
-    <!-- Chapter overview bar -->
     <div class="flex no-wrap text-left gap-2">
       <div v-for="(headline, idx) of headlines" :key="idx">
         <div role="button" class="flex-grow bg-white rounded p-3 prose" @click="toggleChapter(idx)">
@@ -19,7 +19,6 @@
       </div>
     </div>
 
-    <!-- Chapter image and description -->
     <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="p-4 w-1/3 bg-white rounded overflow-auto">
         <nuxt-content :document="chapter" class="prose mb-6" />
@@ -38,10 +37,24 @@
         </div>
       </div>
     </div>
+    -->
+    <div class="w-2/3 bg-white rounded">
+      <div class="reveal">
+        <div class="slides">
+          <section>Single Horizontal Slide</section>
+          <section>
+            <section>Vertical Slide 1</section>
+            <section>Vertical Slide 2</section>
+          </section>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Reveal from 'reveal.js'
+
 export default {
   async asyncData ({ $content, params }) {
     const story = await $content(params.story).fetch()
@@ -61,6 +74,8 @@ export default {
     }
   },
   mounted () {
+    Reveal.initialize()
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         this.closeBigImage()
@@ -86,3 +101,6 @@ export default {
   }
 }
 </script>
+
+<style>
+</style>
