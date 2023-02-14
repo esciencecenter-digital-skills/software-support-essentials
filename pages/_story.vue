@@ -45,9 +45,13 @@
       <div v-else-if="chapter.props.video" class="w-2/3 bg-white rounded">
         <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="'https://www.youtube.com/embed/' + chapter.props.video" title="YouTube video player" frameborder="0"></iframe>
       </div>
-      <!-- Website (for example a hosted reveal.js presentation) -->
+      <!-- Website  -->
       <div v-else-if="chapter.props.website" class="w-2/3 bg-white rounded">
         <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="chapter.props.website" title="Website" frameborder="0"></iframe>
+      </div>
+      <!-- All other (illegal) entries, except widemd. That option should remove the div.  -->
+      <div v-else-if="!chapter.props.widemd">
+        <p> No image found for this chapter. Does the chapter tag for this story have a media key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} The following chapter types are available: `image`, `video`, `website`, `widemd`</p>
       </div>
     </div>
   </div>
