@@ -40,7 +40,7 @@
     <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="reveal">
         <div class="slides">
-	  <section :data-markdown="getContent(chapter.props.image)"
+	  <section :data-markdown="getContent(chapter.props.presentation)"
 	  	    data-separator="^\n\n\n" data-separator-vertical="^\n\n"
 		    data-separator-notes="^Note:"></section>
         </div>
