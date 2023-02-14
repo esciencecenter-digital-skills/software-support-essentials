@@ -38,7 +38,6 @@
       </div>
     </div>
     -->
-    <div class="w-2/3 bg-white rounded">
       <div class="reveal">
         <div class="slides">
           <section>Single Horizontal Slide</section>
@@ -48,12 +47,12 @@
           </section>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
 import Reveal from 'reveal.js'
+import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 
 export default {
   async asyncData ({ $content, params }) {
@@ -74,7 +73,12 @@ export default {
     }
   },
   mounted () {
-    Reveal.initialize()
+//    Reveal.initialize({plugins: [ Markdown ]})
+    let deck = new Reveal({
+       plugins: [ Markdown ]
+    })
+    deck.initialize();
+
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -103,4 +107,6 @@ export default {
 </script>
 
 <style>
+@import url('node_modules/reveal.js/dist/reveal.css');
+@import url('node_modules/reveal.js/dist/theme/black.css');
 </style>
