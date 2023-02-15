@@ -47,7 +47,7 @@
       </div>
       <!-- Website  -->
       <div v-else-if="chapter.props.website" class="w-2/3 bg-white rounded">
-        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="chapter.props.website" title="Website" frameborder="0"></iframe>
+        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="chapter.props.website" title="Website" frameborder="0" />
       </div>
       <!-- All other (illegal) entries, except widemd. That option should remove the div.  -->
       <div v-else-if="!chapter.props.widemd">
