@@ -43,7 +43,7 @@
       </div>
       <!-- Video from youtube -->
       <div v-else-if="chapter.props.video" class="w-2/3 bg-white rounded">
-        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" v-bind:src="'https://www.youtube.com/embed/' + chapter.props.video" title="YouTube video player" frameborder="0"></iframe>
+        <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="'https://www.youtube.com/embed/' + chapter.props.video" title="YouTube video player" frameborder="0" />
       </div>
       <!-- Website  -->
       <div v-else-if="chapter.props.website" class="w-2/3 bg-white rounded">
