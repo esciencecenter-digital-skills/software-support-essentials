@@ -6,7 +6,7 @@
         <img src="~/static/eucp_logo.png" alt="EUCP Logo">
       </NuxtLink>
       <h1 class="text-2xl">
-        Storyboard: {{ story.title }}
+        Storyboard: {{ story.title }} {{ story.presentation }}
       </h1>
     </div>
 
@@ -37,10 +37,10 @@
       </div>
     </div>
 -->
-    <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
+    <div v-if="story.hasOwnProperty('presentation')" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="reveal">
         <div class="slides">
-            <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+            <section :data-markdown="getContent(story.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
         </div>
       </div>
     </div>
@@ -78,7 +78,9 @@ export default {
       showNotes: true,
       plugins: [RevealMarkdown, RevealMath, RevealNotes]
     })
-    deck.initialize()
+  if(this.story.hasOwnProperty('presentation')) {
+	deck.initialize()
+  }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {

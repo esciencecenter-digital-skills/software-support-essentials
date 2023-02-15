@@ -11,6 +11,7 @@
           <p>
             {{ author }}
           </p>
+	  <p> {{ presentation }} </p>
         </div>
         <img :src="thumbnail" alt="storyboard preview" class="max-w-xs rounded-r-lg">
       </div>
@@ -21,6 +22,6 @@
 <script>
 
 export default {
-  props: ['title', 'author', 'thumbnail', 'url']
+  props: ['title', 'author', 'thumbnail', 'url', 'presentation']
 }
 </script>
