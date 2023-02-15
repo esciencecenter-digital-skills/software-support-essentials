@@ -23,7 +23,7 @@
     <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div v-if="chapter.props.widemd" class="p-4 w-full bg-white rounded overflow-auto">
         <div class="content-center" style="width:60%; margin:auto">
-            <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
+          <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
         </div>
       </div>
       <div v-else class="p-4 w-1/3 bg-white rounded overflow-auto">
