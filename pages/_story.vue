@@ -40,9 +40,7 @@
     <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="reveal">
         <div class="slides">
-	  <section :data-markdown="getContent(chapter.props.presentation)"
-	  	    data-separator="^\n\n\n" data-separator-vertical="^\n\n"
-		    data-separator-notes="^Note:"></section>
+            <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
         </div>
       </div>
     </div>
@@ -51,7 +49,7 @@
 
 <script>
 import Reveal from 'reveal.js'
-import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm.js'
 import RevealNotes from 'reveal.js/plugin/notes/notes.js'
 import RevealMath from 'reveal.js/plugin/math/math.js'
 
@@ -74,14 +72,13 @@ export default {
     }
   },
   mounted () {
-    let deck = new Reveal({
+    const deck = new Reveal({
       hash: true,
       embedded: true,
       showNotes: true,
-      plugins: [ RevealMarkdown, RevealMath, RevealNotes ]
+      plugins: [RevealMarkdown, RevealMath, RevealNotes]
     })
-    deck.initialize();
-
+    deck.initialize()
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
