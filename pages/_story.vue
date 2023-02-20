@@ -38,7 +38,7 @@
             For more information on editing stories, see <a href="https://blog.esciencecenter.nl/storyboards-for-science-communication-85e399e5c1b5" target="_blank">this blog post</a>.
           </p>
         </div>
-        <div class="w-2/3 bg-white rounded">
+        <div v-if="chapter.props.hasOwnProperty('image')" class="w-2/3 bg-white rounded">
           <img v-if="!chapter.props.image.endsWith('html')" :src="getContent(chapter.props.image)" alt="story image" class="object-contain w-auto h-full max-w-full max-h-full mx-auto" @click="openBigImage">
           <iframe v-else :src="getContent(chapter.props.image)" frameborder="0" class="w-full h-full" />
           <div v-show="showBigImage" v-if="!chapter.props.image.endsWith('html')" class="fixed inset-0 flex bg-gray-900 bg-opacity-80" @click="closeBigImage">
@@ -46,6 +46,9 @@
               <img :src="getContent(chapter.props.image)" alt="story image" class="w-auto h-full object-contain">
             </div>
           </div>
+        </div>
+        <div v-else>
+        <p> No image found for this chapter. Does the chapter tag for this story have an image key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} </p>
         </div>
       </div>
     </div>
