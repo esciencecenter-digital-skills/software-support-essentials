@@ -14,7 +14,7 @@
     <div v-if="story.hasOwnProperty('presentation')" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="reveal">
         <div class="slides">
-            <section :data-markdown="getContent(story.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+          <section :data-markdown="getContent(story.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" />
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div v-else>
-        <p> No image found for this chapter. Does the chapter tag for this story have an image key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} </p>
+          <p> No image found for this chapter. Does the chapter tag for this story have an image key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} </p>
         </div>
       </div>
     </div>
@@ -86,9 +86,9 @@ export default {
       showNotes: true,
       plugins: [RevealMarkdown, RevealMath, RevealNotes]
     })
-  if(this.story.hasOwnProperty('presentation')) {
-	deck.initialize()
-  }
+    if (Object.prototype.hasOwnProperty.call(this.story, 'presentation')) {
+      deck.initialize()
+    }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
