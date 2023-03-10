@@ -1,7 +1,7 @@
 ---
 id: 0
 trl: medium
-category: reveal.js test
+category: Examples
 title: reveal.js test
 author: eScience Center
 presentation: presentation.md
