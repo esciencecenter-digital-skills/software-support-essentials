@@ -1,6 +1,6 @@
 # First presentation, markdown demo
 
-Note: Here are some notes that should appear at the side.
+Note: Here are some notes that should appear at the side. [test link](https://www.google.com)
 
 
 ## A slide
