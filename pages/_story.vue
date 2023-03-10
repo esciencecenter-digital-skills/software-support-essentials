@@ -10,7 +10,7 @@
       </h1>
     </div>
 
-    <!-- Presentation (revealjs) div -->
+    <!-- Presentation (revealjs) on story level -->
     <div v-if="story.hasOwnProperty('presentation')" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
       <div class="reveal">
         <div class="slides">
@@ -19,26 +19,31 @@
       </div>
     </div>
 
-    <!-- Other multimedia-based chapter divs -->
-    <div v-else>
-      <!-- Headlines -->
-      <div class="flex no-wrap text-left gap-2">
+    <!-- Other media types on chapterlevel -->
+    <div v-else class="h-5/6">
+      <!-- Chapter tabs -->
+      <div class="flex no-wrap text-left gap-2 mb-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
           <div role="button" class="flex-grow bg-white rounded p-3 prose" @click="toggleChapter(idx)">
             {{ headline }}
           </div>
         </div>
       </div>
-      <!-- Current chapter -->
-      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
-        <div class="p-4 w-1/3 bg-white rounded overflow-auto">
-          <nuxt-content :document="chapter" class="prose mb-6" />
-          <EditOnGitHub :target="gitHubURL()" />
-          <p class="prose italic">
-            For more information on editing stories, see <a href="https://blog.esciencecenter.nl/storyboards-for-science-communication-85e399e5c1b5" target="_blank">this blog post</a>.
-          </p>
+
+      <!-- Chapter text (markdown) panel -->
+      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-5/6">
+        <div v-if="chapter.props.widemd" class="p-4 w-full bg-white rounded overflow-auto ">
+          <div class="content-center" style="width:60%; margin:auto">
+            <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
+          </div>
         </div>
-        <div v-if="chapter.props.hasOwnProperty('image')" class="w-2/3 bg-white rounded">
+        <div v-else class="p-4 w-1/3 bg-white rounded overflow-auto">
+          <nuxt-content :document="chapter" class="prose mb-6" />
+        </div>
+
+        <!-- Chapter media panel -->
+        <!-- Image options -->
+        <div v-if="chapter.props.image" class="w-2/3 bg-white rounded">
           <img v-if="!chapter.props.image.endsWith('html')" :src="getContent(chapter.props.image)" alt="story image" class="object-contain w-auto h-full max-w-full max-h-full mx-auto" @click="openBigImage">
           <iframe v-else :src="getContent(chapter.props.image)" frameborder="0" class="w-full h-full" />
           <div v-show="showBigImage" v-if="!chapter.props.image.endsWith('html')" class="fixed inset-0 flex bg-gray-900 bg-opacity-80" @click="closeBigImage">
@@ -47,8 +52,20 @@
             </div>
           </div>
         </div>
-        <div v-else>
-          <p> No image found for this chapter. Does the chapter tag for this story have an image key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"} </p>
+        <!-- Video from youtube -->
+        <div v-else-if="chapter.props.video" class="w-2/3 bg-white h-full rounded flex-grow">
+          <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="'https://www.youtube.com/embed/' + chapter.props.video" title="YouTube video player" frameborder="0" />
+        </div>
+        <!-- Website  -->
+        <div v-else-if="chapter.props.website" class="w-2/3 bg-white rounded">
+          <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="chapter.props.website" title="Website" frameborder="0" />
+        </div>
+        <!-- All other (illegal) entries, except widemd. That option should remove the div. -->
+        <div v-else-if="!chapter.props.widemd">
+          <p>
+            No chapter type found for this chapter. Does the chapter tag for this story have a chapter type key? e.g. :::Chapter{headline="Name of my chapter" image="chapimg.png"}<br>
+            The following chapter types are available: [image, video, website, widemd]
+          </p>
         </div>
       </div>
     </div>
@@ -114,6 +131,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style>
