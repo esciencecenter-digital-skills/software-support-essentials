@@ -10,17 +10,8 @@
       </h1>
     </div>
 
-    <!-- Presentation (revealjs) on story level -->
-    <div v-if="story.hasOwnProperty('presentation')" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-full">
-      <div class="reveal">
-        <div class="slides">
-          <section :data-markdown="getContent(story.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" />
-        </div>
-      </div>
-    </div>
-
     <!-- Other media types on chapterlevel -->
-    <div v-else class="h-5/6">
+    <div class="h-5/6">
       <!-- Chapter tabs -->
       <div class="flex no-wrap text-left gap-2 mb-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
@@ -32,18 +23,29 @@
 
       <!-- Chapter text (markdown) panel -->
       <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-row-reverse justify-end gap-2 overflow-auto h-5/6">
-        <div v-if="chapter.props.widemd" class="p-4 w-full bg-white rounded overflow-auto ">
-          <div class="content-center" style="width:60%; margin:auto">
-            <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
+        <div v-if="!chapter.props.presentation">
+          <div v-if="chapter.props.widemd" class="p-4 w-full bg-white rounded overflow-auto ">
+            <div class="content-center" style="width:60%; margin:auto">
+              <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
+            </div>
           </div>
-        </div>
-        <div v-else class="p-4 w-1/3 bg-white rounded overflow-auto">
-          <nuxt-content :document="chapter" class="prose mb-6" />
+          <div v-else class="p-4 w-1/3 bg-white rounded overflow-auto">
+            <nuxt-content :document="chapter" class="prose mb-6" />
+          </div>
         </div>
 
         <!-- Chapter media panel -->
+        <!-- Presentation (revealjs) on story level -->
+        <div v-if="chapter.props.presentation" class="p-4 w-2/3 bg-white rounded overflow-auto">
+          <div :id="'deck' + idx" class="reveal">
+            <div class="slides">
+              <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" />
+            </div>
+          </div>
+        </div>
+
         <!-- Image options -->
-        <div v-if="chapter.props.image" class="w-2/3 bg-white rounded">
+        <div v-else-if="chapter.props.image" class="w-2/3 bg-white rounded">
           <img v-if="!chapter.props.image.endsWith('html')" :src="getContent(chapter.props.image)" alt="story image" class="object-contain w-auto h-full max-w-full max-h-full mx-auto" @click="openBigImage">
           <iframe v-else :src="getContent(chapter.props.image)" frameborder="0" class="w-full h-full" />
           <div v-show="showBigImage" v-if="!chapter.props.image.endsWith('html')" class="fixed inset-0 flex bg-gray-900 bg-opacity-80" @click="closeBigImage">
@@ -97,15 +99,19 @@ export default {
     }
   },
   mounted () {
-    const deck = new Reveal({
-      hash: true,
-      embedded: true,
-      showNotes: true,
-      plugins: [RevealMarkdown, RevealMath, RevealNotes]
+    this.chapters.forEach((chapter, idx) => {
+      if (chapter.props.presentation) {
+        const deck = new Reveal(
+          document.querySelector('#deck' + idx),
+          {
+            hash: true,
+            embedded: true,
+            showNotes: true,
+            plugins: [RevealMarkdown, RevealMath, RevealNotes]
+          })
+        deck.initialize()
+      }
     })
-    if (Object.prototype.hasOwnProperty.call(this.story, 'presentation')) {
-      deck.initialize()
-    }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -119,9 +125,6 @@ export default {
     },
     toggleChapter (i) {
       this.currentChapter = i
-    },
-    gitHubURL () {
-      return `https://github.com/eucp-project/storyboards/blob/main/static/stories/${this.story.slug}.md`
     },
     openBigImage () {
       this.showBigImage = true
