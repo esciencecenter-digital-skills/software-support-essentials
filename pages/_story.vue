@@ -37,7 +37,7 @@
         <!-- Chapter media panel -->
         <!-- Presentation (revealjs) on story level -->
         <div v-if="chapter.props.presentation" class="p-4 w-2/3 bg-white rounded overflow-auto">
-          <div class="reveal" :id="'deck' + idx">
+          <div :id="'deck' + idx" class="reveal">
             <div class="slides">
               <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:" />
             </div>
