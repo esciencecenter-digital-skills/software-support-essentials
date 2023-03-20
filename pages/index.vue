@@ -13,7 +13,7 @@
       <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-center" placeholder="search"></input>
 
       <!-- categories -->
-      <div v-for="(category, key) in categories" :key="key" class="flex flex-wrap gap-4 mb-8">
+      <div v-for="(category, key) in categories.sort()" :key="key" class="flex flex-wrap gap-4 mb-8">
         <h3 class="prose-xl w-full">
           {{ category }}
         </h3>
