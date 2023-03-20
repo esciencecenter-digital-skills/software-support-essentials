@@ -11,7 +11,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'EUCP Storyboards',
+    title: 'Essentials for Research Software Support',
     htmlAttrs: {
       lang: 'en'
     },

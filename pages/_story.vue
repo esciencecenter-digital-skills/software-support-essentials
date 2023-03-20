@@ -3,10 +3,10 @@
     <!-- Header -->
     <div class="flex gap-10 m-2 items-center">
       <NuxtLink :to="`/`">
-        <img src="~/static/eucp_logo.png" alt="EUCP Logo">
+        <img src="~/static/nlesc_logo.png" alt="Netherlands eScience Center Logo">
       </NuxtLink>
       <h1 class="text-2xl">
-        Storyboard: {{ story.title }} {{ story.presentation }}
+        {{ story.category }}: {{ story.title }}
       </h1>
     </div>
 

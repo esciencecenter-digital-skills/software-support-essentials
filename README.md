@@ -1,9 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5905676.svg)](https://doi.org/10.5281/zenodo.5905676)
-[![Research Software Directory Badge](https://img.shields.io/badge/rsd-storyboards-00a3e3.svg)](https://www.research-software.nl/software/storyboards)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eucp-project_storyboards&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=eucp-project_storyboards)
-[![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B-yellow)](https://fair-software.eu)
-
-# Essentials for Software Support
+# Essentials for Research Software Support
 
 On this repository, we are developing material for the course "Essentials for
 Research Software Support".
@@ -77,16 +72,6 @@ The frontmatter (title, author, etc.) will be used to show the story on the
 stories overview page. The ID and TRL (technical readiness level) properties are
 currently not used, but they are still here for legacy reasons.
 
-## Adding your story to our collection
-
-If you want your story to be included on
-[eucp-project.github.io/storyboards](https://eucp-project.github.io/storyboards),
-you can make a pull request to this repository. We will review it and if
-everything is okay, we'll merge the story into the main branch. Continous
-deployment will then automatically update the site.
-
-If you want to add a story but are unsure about the github workflow, please
-don't hesitate to get in touch. We are happy to help.
 
 ## Serving the site locally
 

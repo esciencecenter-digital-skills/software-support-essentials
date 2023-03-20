@@ -2,9 +2,9 @@
   <div class="flex flex-col w-screen h-screen bg-gray-200 overflow-auto">
     <!-- Banner -->
     <div class="flex gap-10 m-2 items-center">
-      <img src="eucp_logo.png" alt="EUCP Logo">
+      <img src="nlesc_logo.png" alt="Netherlands eScience Center Logo">
       <h1 class="text-2xl">
-        Essentials for Software Support
+        Essentials for Research Software Support
       </h1>
     </div>
 
@@ -13,7 +13,7 @@
       <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-center" placeholder="search"></input>
 
       <!-- categories -->
-      <div v-for="(category, key) in categories" :key="key" class="flex flex-wrap gap-4 mb-8">
+      <div v-for="category in categories" :key="category" class="flex flex-wrap gap-4 mb-8">
         <h3 class="prose-xl w-full">
           {{ category }}
         </h3>
@@ -42,6 +42,10 @@ export default {
     const categories = stories
       .map(story => story.category)
       .filter((v, i, a) => a.indexOf(v) === i)
+      .sort((a, b) => {
+        const categoryOrder = ['Getting started', 'Software Quality', 'Publishing & Citing', 'Resources', 'Examples']
+        return categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+      })
 
     return { stories, categories }
   },
