@@ -4,7 +4,7 @@
     <div class="flex gap-10 m-2 items-center">
       <img src="nlesc_logo.png" alt="Netherlands eScience Center Logo">
       <h1 class="text-2xl">
-        Essentials for Research Software Support
+        {{ $config.title }}
       </h1>
     </div>
 
@@ -43,8 +43,7 @@ export default {
       .map(story => story.category)
       .filter((v, i, a) => a.indexOf(v) === i)
       .sort((a, b) => {
-        const categoryOrder = ['Getting started', 'Software Quality', 'Publishing & Citing', 'Resources', 'Examples']
-        return categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+        return context.$config.categoryOrder.indexOf(a) - context.$config.categoryOrder.indexOf(b)
       })
 
     return { stories, categories }

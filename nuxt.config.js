@@ -1,6 +1,9 @@
 import tailwindTypography from '@tailwindcss/typography'
+import config from './config.json'
 
 export default {
+    publicRuntimeConfig: config,
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
@@ -11,7 +14,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Essentials for Research Software Support',
+    title: config.title,
     htmlAttrs: {
       lang: 'en'
     },
