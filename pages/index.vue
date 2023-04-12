@@ -1,12 +1,6 @@
 <template>
   <div class="flex flex-col w-screen h-screen bg-gray-200 overflow-auto">
-    <!-- Banner -->
-    <div class="flex gap-10 m-2 items-center">
-      <img src="nlesc_logo.png" alt="Netherlands eScience Center Logo">
-      <h1 class="text-2xl">
-        {{ $config.title }}
-      </h1>
-    </div>
+    <Banner></Banner>
 
     <div class="flex flex-col m-2 gap-2">
       <!-- search -->
