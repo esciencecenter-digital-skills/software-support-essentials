@@ -43,7 +43,7 @@ export default {
       .map(story => story.category)
       .filter((v, i, a) => a.indexOf(v) === i)
       .sort((a, b) => {
-        const categoryOrder = ['Getting started', 'Software Quality', 'Publishing & Citing', 'Resources', 'Examples']
+        const categoryOrder = ['Getting started', 'Reusability', 'Publishing & Citing', 'Resources', 'Examples']
         return categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
       })
 
