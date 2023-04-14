@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-screen h-screen bg-gray-200 overflow-auto">
-    <Banner></Banner>
+    <Banner />
 
     <div class="flex flex-col m-2 gap-2">
       <!-- search -->
