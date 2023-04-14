@@ -38,7 +38,6 @@ export default {
       .filter((v, i, a) => a.indexOf(v) === i)
       .sort((a, b) => {
         return context.$config.categoryOrder.indexOf(a) - context.$config.categoryOrder.indexOf(b)
-
       })
 
     return { stories, categories }
