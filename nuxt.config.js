@@ -2,7 +2,7 @@ import tailwindTypography from '@tailwindcss/typography'
 import config from './config.json'
 
 export default {
-    publicRuntimeConfig: config,
+  publicRuntimeConfig: config,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
