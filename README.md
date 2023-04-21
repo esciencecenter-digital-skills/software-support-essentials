@@ -72,6 +72,7 @@ The frontmatter (title, author, etc.) will be used to show the story on the
 stories overview page. The ID and TRL (technical readiness level) properties are
 currently not used, but they are still here for legacy reasons.
 
+Global configurations like the project title and category order, should be set in the config.json file, in the root directory.
 
 ## Serving the site locally
 
@@ -97,6 +98,8 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+Serving with hot reload will not refresh settings that are changed in `config.json`. To show these changes a complete rebuild should be done using `npm run build`.
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
