@@ -1,4 +1,19 @@
 /*!
+ * The reveal.js markdown plugin. Handles parsing of
+ * markdown inside of presentations as well as loading
+ * of external markdown documents.
+ */
+
+/*!
+* reveal.js 4.5.0
+* https://revealjs.com
+* MIT licensed
+*
+* Copyright (C) 2011-2023 Hakim El Hattab, https://hakim.se
+*/
+
+
+/*!
  * Vue.js v2.7.14
  * (c) 2014-2022 Evan You
  * Released under the MIT License.
@@ -16,18 +31,3 @@
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
  */
-
-
-/*!
- * The reveal.js markdown plugin. Handles parsing of
- * markdown inside of presentations as well as loading
- * of external markdown documents.
- */
-
-/*!
-* reveal.js 4.4.0
-* https://revealjs.com
-* MIT licensed
-*
-* Copyright (C) 2011-2022 Hakim El Hattab, https://hakim.se
-*/
