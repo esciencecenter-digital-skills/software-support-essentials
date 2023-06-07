@@ -6,7 +6,7 @@
 // <section data-state="yellow-strip">
 // will toggle the yellow-strip element.
 //
-// Element styles are defined in reveal-nlesc.scss
+// Element styles are defined in nlesc-decorations.scss
 
 export default {
   id: 'decorations',
