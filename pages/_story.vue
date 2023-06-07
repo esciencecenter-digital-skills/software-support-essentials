@@ -75,8 +75,3 @@
 </template>
 
 <script type="module" src="../story.js"></script>
-
-<style>
-@import url('node_modules/reveal.js/dist/reveal.css');
-@import url('node_modules/reveal.js/dist/theme/black.css');
-</style>
