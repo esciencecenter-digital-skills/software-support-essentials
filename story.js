@@ -34,7 +34,11 @@ export default {
         const deck = new Reveal(
           document.querySelector('#deck' + idx),
           {
+            controls: true,
+            progress: true,
+            center: true,
             hash: true,
+            transition: 'slide',
             embedded: true,
             showNotes: true,
             plugins: [RevealMarkdown, RevealMath, RevealNotes, Highlight, Zoom, Decorations, Search, Reveald3]
