@@ -1,5 +1,5 @@
 import 'reveal.js/dist/reveal.css'
-import './nlesc-decorations.scss'
+import '../layouts/nlesc-decorations.scss'
 import Reveal from 'reveal.js'
 import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm.js'
 import RevealNotes from 'reveal.js/plugin/notes/notes.js'
@@ -7,8 +7,8 @@ import RevealMath from 'reveal.js/plugin/math/math.js'
 import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js'
 import Search from 'reveal.js/plugin/search/search.esm.js'
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js'
-import { Reveald3 } from './plugins/reveald3.js'
-import Decorations from './nlesc-decorations.js'
+import { Reveald3 } from './../plugins/reveald3.js'
+import Decorations from './../layouts/nlesc-decorations.js'
 
 export default {
   async asyncData ({ $content, params }) {
