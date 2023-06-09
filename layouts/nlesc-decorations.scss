@@ -76,27 +76,28 @@ $heading4Size: 1.5em;
 	transition: opacity 1s, left 1s;
 	opacity: 0;
 	position: absolute;
-	left: -12vw;
-	top: 1.5vh;
+	left: -50%;
+	top: 1.5%;
 	z-index: 2;
 	img {
-	  width: 12vw;
+	  width: 70%;
 	}
   }
 
   #right-e {
-	transition: right 1s, top 1s;
+	transition: opacity 1s, top 1s;
+	opacity: 0;
 	position: absolute;
-	right: -6vw;
-	width: 6vw;
+	top: -100%;
+	width: 6%;
 	z-index: 3;
   }
 
   #left-e {
 	transition: left 1s, bottom 1s;
 	position: absolute;
-	width: 6vw;
-	left: -6vw;
+	width: 6%;
+	left: -100%;
 	z-index: 3;
   }
 
@@ -133,7 +134,7 @@ $heading4Size: 1.5em;
 	transition: opacity 1s;
 	opacity: 0;
 	position: absolute;
-	left: 6vw;
+	left: 6%;
 	right: 52%;
 	bottom: 0;
 	top: 0;
@@ -144,6 +145,7 @@ $heading4Size: 1.5em;
 	h3 {
 	  color: white;
 	  text-align: left;
+	  font-size: 100%;
 	}
   }
 
@@ -156,13 +158,13 @@ $heading4Size: 1.5em;
 	border-radius: 20vw 0 0 0;
 	z-index: 2;
 	position: absolute;
-	right: -100vw;
+	right: -100%;
 	bottom: 0;
 	#footer {
 	  text-align: right;
 	  line-height: 130%;
 	  padding: 0;
-	  margin: 1vw 1vw 1vw 3vw;
+	  margin: 1% 1% 1% 3%;
 	  bottom: 0;
 	  right: 0;
 	}
@@ -170,12 +172,12 @@ $heading4Size: 1.5em;
 
   #yellow-strip {
 	background-color: $eScienceYellow;
-	width: 18vw;
-	height: 85vh;
+	width: 18%;
+	height: 85%;
 	border-radius: 10vw 10vw 0 0;
 	z-index: 2;
 	position: absolute;
-	left: -18vw;
+	left: -28%;
 	bottom: 0;
 	transition: left 1s;
   }
@@ -187,10 +189,10 @@ $heading4Size: 1.5em;
 	transition: bottom 1s;
 	position: absolute;
 	background-color: $eScienceYellow;
-	right: 50vw;
-	bottom: -25vh;
-	width: 17vw;
-	height: 25vh;
+	right: 50%;
+	bottom: -100%;
+	width: 17%;
+	height: 25%;
 	border-radius: 20vw 0 0 0;
 	z-index: 2;
   }
@@ -200,10 +202,10 @@ $heading4Size: 1.5em;
 	transition: bottom 1s;
 	position: absolute;
 	background-color: $eScienceYellow;
-	right: 50vw;
-	bottom: -25vh;
-	width: 17vw;
-	height: 25vh;
+	right: 50%;
+	bottom: -100%;
+	width: 17%;
+	height: 25%;
 	border-radius: 0 20vw 0 0;
 	z-index: 2;
   }
@@ -211,18 +213,18 @@ $heading4Size: 1.5em;
   #yellow-flag {
 	background-color: $eScienceYellow;
 	transition: left 1s, bottom 1s;
-	width: 10vw;
-	height: 12vh;
+	width: 10%;
+	height: 12%;
 	border-radius: 0 7vh 7vh 0;
 	z-index: 1;
 	position: absolute;
-	left: -20vh;
-	bottom: 5vh;
+	left: -20%;
+	bottom: 5%;
 	margin: 0;
-	padding: 1vw 0 0 0;
+	padding: 1% 0 0 0;
 	img {
 	  position: relative;
-	  height: 90vh;
+	  height: 90%;
 	  margin: 0;
 	  padding: 0;
 	}
@@ -233,10 +235,10 @@ $heading4Size: 1.5em;
 	transition: bottom 1s;
 	position: absolute;
 	background-color: $eSciencePurple;
-	right: -15vw;
-	bottom: -15vh;
-	width: 15vw;
-	height: 15vh;
+	right: -15%;
+	bottom: -50%;
+	width: 15%;
+	height: 15%;
 	border-radius: 20vw 20vw 0 0;
 	z-index: 2;
   }
@@ -247,9 +249,9 @@ $heading4Size: 1.5em;
 	position: absolute;
 	background-color: $eSciencePurple;
 	left: 0;
-	top: -30vh;
-	width: 30vw;
-	height: 30vh;
+	top: -50%;
+	width: 30%;
+	height: 30%;
 	border-radius: 0 0 20vw 20vw;
 	z-index: 2;
   }
@@ -257,13 +259,13 @@ $heading4Size: 1.5em;
   #purple-half-circle-logo {
 	transition: bottom 1s;
 	background-color: $eSciencePurple;
-	width: 36vw;
-	height: 30vh;
+	width: 36%;
+	height: 30%;
 	border-radius: 28vw 28vw 0 0;
 	z-index: 2;
 	position: absolute;
 	left: 0;
-	bottom: -30vh;
+	bottom: -40%;
 	img {
 	  position: relative;
 	  bottom: -34%;
@@ -277,7 +279,7 @@ $heading4Size: 1.5em;
 	position: absolute;
 	display: flex;
 	right: 0;
-	top: -50vh;
+	top: -100vh;
 	z-index: 2;
 	div {
 	  background-color: $eSciencePurple;
@@ -306,10 +308,10 @@ $heading4Size: 1.5em;
   #globe, #phone, #mail {
 	transition: left 1s;
 	position: absolute;
-	width: 2.2vw;
+	width: 2.2%;
 	z-index: 3;
-	top: -20vh;
-	left: -20vw;
+	top: -20%;
+	left: -20%;
   }
 
   // Define how decorations look when 'activated', using mixins to avoid repetition
@@ -318,9 +320,9 @@ $heading4Size: 1.5em;
   @mixin blue-overlay { #overlay { background-color: $eScienceBlue; opacity: .8; } }
   @mixin purple-overlay { #overlay { background-color: $eSciencePurple; opacity: .8; } }
 
-  @mixin logo-color { #logo-color { left: 3vw; opacity: 1; } }
-  @mixin logo-white { #logo-white { left: 3vw; opacity: 1; } }
-  @mixin logo-part-white { #logo-part-white { left: 3vw; opacity: 1; } }
+  @mixin logo-color { #logo-color { left: 3%; opacity: 1; } }
+  @mixin logo-white { #logo-white { left: 3%; opacity: 1; } }
+  @mixin logo-part-white { #logo-part-white { left: 3%; opacity: 1; } }
 
   @mixin yellow-flag { #yellow-flag { left: 0; } }
   @mixin yellow-strip { #yellow-strip { left: 0; } }
@@ -329,8 +331,8 @@ $heading4Size: 1.5em;
 
   @mixin purple-blob { #purple-blob { top: 0; }}
   @mixin purple-half-circle-top { #purple-half-circle-top { top: 0; } }
-  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottom { bottom: 0; right: calc(50% - 15vw); } }
-  @mixin purple-half-circle-bottomleft { #purple-half-circle-bottom { bottom: 0; right: calc(50% + 17vw); } }
+  @mixin purple-half-circle-bottommiddle { #purple-half-circle-bottom { bottom: 0; right: calc(50% - 15%); } }
+  @mixin purple-half-circle-bottomleft { #purple-half-circle-bottom { bottom: 0; right: calc(50% + 17%); } }
   @mixin purple-half-circle-logo { #purple-half-circle-logo { bottom: 0; } }
 
   @mixin touch-pane { #touch-pane { opacity: 1; } }
@@ -339,14 +341,14 @@ $heading4Size: 1.5em;
   @mixin blue-pane-left { #blue-pane { opacity: 1; left: 0; right: 50%;} }
   @mixin blue-pane-right { #blue-pane { opacity: 1; left: 50%; right: 0;} }
 
-  @mixin right-e-top { #right-e { top: 10vh; right: 0; }}
-  @mixin right-e-bottom { #right-e { top: 67vh; right: 0; }}
+  @mixin right-e-top { #right-e { top: 10%; right: 0; opacity: 1; }}
+  @mixin right-e-bottom { #right-e { top: 67%; right: 0; opacity: 1; }}
 
-  @mixin left-e { #left-e { bottom: 30vh; left: 0} }
+  @mixin left-e { #left-e { bottom: 30%; left: 0} }
 
-  @mixin globe { #globe { top: 38.6vh; left: 46vw; } }
-  @mixin mail { #mail {	top: 46.6vh; left: 46vw; } }
-  @mixin phone { #phone { top: 53.5vh; left: 46vw; } }
+  @mixin globe { #globe { top: 38.6%; left: 46%; } }
+  @mixin mail { #mail {	top: 46.6%; left: 46%; } }
+  @mixin phone { #phone { top: 53.5%; left: 46%; } }
 
 
   // data-state changes set classes on the reveal-viewport element
@@ -391,7 +393,7 @@ $heading4Size: 1.5em;
 	  @include left-e;
 	  h1, h2 {
 		color: white;
-		margin: 6vh 6vw 6vh 15vw;
+		margin: 6% 6% 6% 15%;
 	  }
 	}
 	// Classes for toggling multiple elements at once; default styles
