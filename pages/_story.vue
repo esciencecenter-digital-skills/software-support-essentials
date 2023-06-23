@@ -74,4 +74,4 @@
   </div>
 </template>
 
-<script type="module" src="../middleware/story.js"></script>
+<script type="module" src="../layouts/story.js"></script>
