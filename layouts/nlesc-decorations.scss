@@ -184,29 +184,15 @@ $heading4Size: 1.5em;
 
   #yellow-strip.visible { left: 0; }
 
-  #yellow-half-strip-left {
-	opacity: 1;
-	transition: bottom 1s;
+  #yellow-half-strip {
+	opacity: 0;
+	transition: right 1s;
 	position: absolute;
 	background-color: $eScienceYellow;
-	right: 50%;
-	bottom: -100%;
+	right: 0%;
+	bottom: 0%;
 	width: 17%;
 	height: 25%;
-	border-radius: 20vw 0 0 0;
-	z-index: 2;
-  }
-
-  #yellow-half-strip-right {
-	opacity: 1;
-	transition: bottom 1s;
-	position: absolute;
-	background-color: $eScienceYellow;
-	right: 50%;
-	bottom: -100%;
-	width: 17%;
-	height: 25%;
-	border-radius: 0 20vw 0 0;
 	z-index: 2;
   }
 
@@ -326,8 +312,8 @@ $heading4Size: 1.5em;
 
   @mixin yellow-flag { #yellow-flag { left: 0; } }
   @mixin yellow-strip { #yellow-strip { left: 0; } }
-  @mixin yellow-half-strip-right { #yellow-half-strip-right { bottom: 0; } }
-  @mixin yellow-half-strip-left { #yellow-half-strip-left { bottom: 0; } }
+  @mixin yellow-half-strip-right { #yellow-half-strip { opacity: 1; border-radius: 0 20vw 0 0; right: 50%; } }
+  @mixin yellow-half-strip-left { #yellow-half-strip { opacity: 1; border-radius: 20vw 0 0 0; right: 50%; } }
 
   @mixin purple-blob { #purple-blob { top: 0; }}
   @mixin purple-half-circle-top { #purple-half-circle-top { top: 0; } }
