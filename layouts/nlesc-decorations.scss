@@ -85,10 +85,10 @@ $heading4Size: 1.5em;
   }
 
   #right-e {
-	transition: opacity 1s, top 1s;
+	transition: opacity 1s, bottom 1s;
 	opacity: 0;
 	position: absolute;
-	top: -100%;
+	bottom: -100%;
 	width: 6%;
 	z-index: 3;
   }
@@ -327,8 +327,8 @@ $heading4Size: 1.5em;
   @mixin blue-pane-left { #blue-pane { opacity: 1; left: 0; right: 50%;} }
   @mixin blue-pane-right { #blue-pane { opacity: 1; left: 50%; right: 0;} }
 
-  @mixin right-e-top { #right-e { top: 10%; right: 0; opacity: 1; }}
-  @mixin right-e-bottom { #right-e { top: 67%; right: 0; opacity: 1; }}
+  @mixin right-e-top { #right-e { bottom: 67%; right: 0; opacity: 1; }}
+  @mixin right-e-bottom { #right-e { bottom: 10%; right: 0; opacity: 1; }}
 
   @mixin left-e { #left-e { bottom: 30%; left: 0} }
 
