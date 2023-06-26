@@ -1,14 +1,15 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-gray-200 gap-2">
+  <div class="flex flex-col w-screen h-screen bg-blue-50 gap-2">
+    <Banner />
     <!-- Header -->
-    <div class="flex gap-10 m-2 items-center">
+    <!-- <div class="flex gap-10 m-2 items-center">
       <NuxtLink :to="`/`">
-        <img src="~/static/nlesc_logo.png" alt="Netherlands eScience Center Logo">
+        <img src="~/static/nlesc-logo.svg" alt="Netherlands eScience Center Logo">
       </NuxtLink>
       <h1 class="text-2xl">
         {{ story.category }}: {{ story.title }}
       </h1>
-    </div>
+    </div> -->
 
     <!-- Other media types on chapterlevel -->
     <div class="h-5/6">

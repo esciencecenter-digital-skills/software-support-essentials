@@ -1,3 +1,3 @@
 <template>
-  <Nuxt class="p-2" />
+  <Nuxt class="p-0" />
 </template>

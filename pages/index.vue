@@ -1,11 +1,8 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-gray-200 overflow-auto">
+  <div class="flex flex-col w-screen h-screen bg-blue-50 overflow-auto">
     <Banner />
-
+    <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-end" placeholder="search">
     <div class="flex flex-col m-2 gap-2">
-      <!-- search -->
-      <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-center" placeholder="search"></input>
-
       <!-- categories -->
       <div v-for="category in categories" :key="category" class="flex flex-wrap gap-4 mb-8">
         <h3 class="prose-xl w-full">
@@ -26,6 +23,8 @@
 </template>
 
 <script>
+import '../layouts/style.scss'
+
 export default {
   async asyncData (context) {
     const stories = await context.$content()
