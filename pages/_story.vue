@@ -39,7 +39,7 @@
         <div v-if="chapter.props.presentation" class="p-4 w-2/3 bg-white rounded overflow-auto">
           <div :id="'deck' + idx" class="reveal">
             <div class="slides">
-              <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\r?\n===\r?\n$" data-separator-vertical="^\r?\n---\r?\n$" data-separator-notes="^Note:" />
+              <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\r?\n---\r?\n$" data-separator-notes="^Note:" />
             </div>
           </div>
         </div>
