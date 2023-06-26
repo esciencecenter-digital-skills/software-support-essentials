@@ -319,35 +319,19 @@ $heading4Size: 1.5em;
   // so this is where we can build up our custom classes
   .reveal-viewport {
 
-	// Classes for toggling individual elements
-
-	// e.g. "for any element with the .reveal-viewport class that also has the
-	// .white-overlay class, apply the 'white-overlay' styling rule", etc.
+	// Classes for toggling individual elements, using the mixins defined above
+	// These classes are applied to the reveal-viewport element itself
+	// so they can be used to style any element inside the viewport
+	// e.g:
 	// &.white-overlay { @include white-overlay; }
 	// &.black-overlay { @include black-overlay; }
-	// &.blue-overlay { @include blue-overlay; }
-	// &.purple-overlay { @include purple-overlay; }
-	// &.logo-color { @include logo-color; }
-	// &.logo-white { @include logo-white; }
-	// &.logo-part-white { @include logo-part-white; }
-	// &.yellow-flag { @include yellow-flag }
-	// &.yellow-strip { @include yellow-strip; }
-	// &.yellow-half-strip { @include yellow-half-strip; }
-	// &.purple-blob { @include purple-blob; }
-	// &.purple-half-circle-top { @include purple-half-circle-top; }
-	// &.purple-half-circle-bottom { @include purple-half-circle-bottom; }
-	// &.purple-strip-bottom { @include purple-strip-bottom; }
-	// &.touch-pane { @include touch-pane; }
 	// &.blue-pane-left { @include blue-pane-left; }
 	// &.blue-pane-right { @include blue-pane-right; }
 	// &.right-e-top { @include right-e-top; }
 	// &.right-e-bottom { @include right-e-bottom; }
+	// etc.
 
-	// Adjust position of yellow flag when combined with purple half circle
-   // &.purple-half-circle-bottom.yellow-flag { #yellow-flag { }}// bottom: 50%;  } }
-
-
-  //data-state="yellow-flag yellow-strip purple-half-circle-bottom purple-blob right-e-top" data-background-color="#009DDD"
+	// Classes for toggling multiple elements at once; default styles
 	&.title {
 	  @include purple-half-circle-logo;
 	  @include purple-blob;
@@ -360,23 +344,12 @@ $heading4Size: 1.5em;
 		margin: 6% 6% 6% 15%;
 	  }
 	}
-	// Classes for toggling multiple elements at once; default styles
 	&.standard {
 	  @include logo-color;
 	  @include yellow-flag;
 	  h1, h2, h3, p, ul{
 		text-align: left;
 		padding-left: 10%;
-	  }
-	}
-	&.two-pane {
-	  // why not just use "standard blue-pane-right" directly?
-	  @include logo-color;
-	  @include yellow-flag;
-	  @include blue-pane-right;
-	  h1, h2, h3, p, ul {
-		text-align: left;
-		padding-right: 50%;
 	  }
 	}
 	&.about {
