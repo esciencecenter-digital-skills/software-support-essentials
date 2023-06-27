@@ -5,9 +5,9 @@
         <img src="~/static/nlesc-logo.svg" alt="Netherlands eScience Center Logo" width="250px">
       </NuxtLink>
     </div>
-    <div class="flex p-10 gap-10 bg-blue-50 font-display">
+    <div v-if="$route.path === '/'" class="flex p-10 gap-10 bg-blue-50 font-display">
       <h1 class="text-4xl text-eSciencePurple">
-        {{ $route.path === '/' ? $config.title : '' }} <!-- only if showing the main page -->
+        {{ $config.title }}
       </h1>
     </div>
   </div>
