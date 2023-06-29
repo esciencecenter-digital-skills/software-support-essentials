@@ -1,17 +1,28 @@
 /*!
+  * vue-router v3.5.2
+  * (c) 2021 Evan You
+  * @license MIT
+  */
+
+/*!
+ * Vue.js v2.6.14
+ * (c) 2014-2021 Evan You
+ * Released under the MIT License.
+ */
+
+
+/*!
+ * Handles finding a text string anywhere in the slides and showing the next occurrence to the user
+ * by navigatating to that slide and highlighting it.
+ *
+ * @author Jon Snyder <snyder.jon@gmail.com>, February 2013
+ */
+
+/*!
  * The reveal.js markdown plugin. Handles parsing of
  * markdown inside of presentations as well as loading
  * of external markdown documents.
  */
-
-/*!
-* reveal.js 4.5.0
-* https://revealjs.com
-* MIT licensed
-*
-* Copyright (C) 2011-2023 Hakim El Hattab, https://hakim.se
-*/
-
 
 /*!
  * vue-client-only v0.0.0-semantic-release
@@ -25,9 +36,10 @@
  * Released under the MIT License.
  */
 
-
 /*!
- * Vue.js v2.7.14
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
+* reveal.js 4.4.0
+* https://revealjs.com
+* MIT licensed
+*
+* Copyright (C) 2011-2022 Hakim El Hattab, https://hakim.se
+*/
