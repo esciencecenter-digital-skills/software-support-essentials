@@ -16,18 +16,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
 
       - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '14.x'
 
-      - name: Install dependencies
-        run: npm install
+      - name: NPM CI
+        run: npm ci
 
       - name: Generate
-        run: npm run dev
+        run: npm publish
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
