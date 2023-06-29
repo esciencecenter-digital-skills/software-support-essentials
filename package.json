@@ -1,5 +1,5 @@
 {
-  "name": "storyboards",
+  "name": "researchsoftwareessentials",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,8 @@
     "nuxt": "^2.15.7",
     "remark-directive": "^1.0.1",
     "remark-sectionize": "^1.1.1",
-    "reveal.js": "^4.4.0"
+    "reveal.js": "^4.4.0",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
