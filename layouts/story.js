@@ -35,7 +35,7 @@ export default {
             progress: true,
             center: true,
             hash: true,
-            transition: 'slide',
+            transition: 'none',
             embedded: true,
             showNotes: true,
             plugins: [RevealMarkdown, RevealMath, RevealNotes, Decorations, Search]
