@@ -31,41 +31,22 @@ The data can be converted into an image using custom software.
 
 <!-- .slide: data-state="standard" -->
 
-## Research Software is...
+<center>
+<img src="stories/_fairsoftware/definition.png" width="55%">
+</center>
 
-“software that is used to generate, process or analyse results that you intend to appear in a publication (either in a journal, conference paper, monograph, book or thesis)”
-
-*[UK Research Software Survey 2014](https://doi.org/10.5281/zenodo.608046)*
+<small>definition of Research Software from the FAIR4RS working group</small>
 
 Note:
 
-A definition of research software, from the UK Research Software Survey 2014.
+A definition of research software, from the FAIR4RS working group.
 It is important that not all software that is used in research is research software.
 For example, a text editor that is used to write a paper is not research software.
-Nor is powerpoint, or a web browser.
+Nor is powerpoint, a web browser, or the software used to guide the telescope.
 Even tools like R or Python are not necessarily research software.
 The code written in R or Python for an analysis would be research software, however.
 Just like a custom-made Excel macro that is used to analyse data.
-
----
-
-<!-- .slide: data-state="standard" -->
-
-## Research life cycle
-
-<center>
-<img src="stories/_fairsoftware/researchcycle.png" width="60%">
-</center>
-
-Note:
-Emphasize the role of software in all phases of research:
-
-- Planning: to design experiments
-- Collecting: to collect data, to control instruments, to run simulations
-- Analysing: to analyse data, to generate models
-- Publishing: to generate figures, to write papers
-- Preserving: preserve data and software, to make it available for reuse
-- Re-using: to re-use data and software, to reproduce results, to build upon
+Or a custom-made web application that is used to collect data.
 
 ---
 
@@ -360,7 +341,7 @@ FAIR is not a perfect metric, but it is helpful, and tailored to specific values
 
 ## Take home messages
 
-- Software is found in all stages of the research cycle
+- Software is an important part of research
 - FAIR4RS principles guide towards accessibility and openness of research software
 - FAIR is not a quality checklist
 - Software places unique demands on FAIR, and provides unique opportunities
