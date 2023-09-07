@@ -2,6 +2,7 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Nunito'],
+      displayLight: ['Nunito:wght@500'],
       body: ['Assistant']
     },
     textColor: {
@@ -15,7 +16,7 @@ module.exports = {
       eScienceBlue: '#009DDD',
       eScienceYellow: '#FFB213',
       eScienceWhite: '#FFFFFF',
-      gentleBlue: '#EFF6FF'
+      gentleBlue: '#e5f5fb'
     })
   }
 }
