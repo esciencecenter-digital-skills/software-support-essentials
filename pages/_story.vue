@@ -5,10 +5,10 @@
     <!-- Other media types on chapterlevel -->
     <div class="flex flex-col h-full w-full">
       <!-- Chapter tabs -->
-      <div class="flex flex-auto no-wrap text-left bg-eSciencePurple gap-2 mb-2">
+      <div class="flex flex-auto no-wrap text-left bg-eScienceBlue gap-2 pl-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
-          <div role="button" class="flex-grow rounded p-3 font-display" @click="toggleChapter(idx)">
-            <h2 class="text-xl text-eSciencePurple">
+          <div role="button" class="flex-grow rounded p-4 font-body" @click="toggleChapter(idx)">
+            <h2 class="text-xl text-eScienceWhite">
               {{ headline }}
             </h2>
           </div>
