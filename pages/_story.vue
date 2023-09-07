@@ -8,14 +8,14 @@
       <div class="flex flex-auto no-wrap text-left bg-gentleBlue gap-2 pl-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
           <div role="button" class="flex-grow rounded p-4" @click="toggleChapter(idx)">
-            <h2 class="text-xl font-displayLight">
+            <h2 class="text-lg font-displayLight text-eSciencePurple hover:underline">
               {{ headline }}
             </h2>
           </div>
         </div>
       </div>
 
-      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto  p-6 bg-gentleBlue h-full w-full">
+      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto p-6 bg-gentleBlue font-body h-full w-full">
 
         <!-- Chapter media panel -->
         <!-- Presentation (revealjs) on story level -->
@@ -49,10 +49,11 @@
           <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="chapter.props.website" title="Website" frameborder="0" />
         </div>
 
+        <!-- Only text  -->
         <div v-else-if="chapter.props.widemd" class="flex flex-initial w-full bg-white rounded ">
-          <!-- <div class="flex-initial"> -->
+          <div class="container mx-auto w-2/3">
             <nuxt-content :document="chapter" class="prose mb-6 max-w-none" />
-          <!-- </div> -->
+          </div>
         </div>
 
         <!-- All other (illegal) entries, except widemd. That option should remove the div. -->
