@@ -2,7 +2,6 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Nunito'],
-      displayLight: ['Nunito:wght@500'],
       body: ['Assistant']
     },
     textColor: {

@@ -8,7 +8,7 @@
       <div class="flex flex-auto no-wrap text-left bg-gentleBlue gap-2 pl-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
           <div role="button" class="flex-grow rounded p-4" @click="toggleChapter(idx)">
-            <h2 class="text-lg font-displayLight text-eSciencePurple hover:underline">
+            <h2 class="text-lg font-display text-eSciencePurple hover:underline">
               {{ headline }}
             </h2>
           </div>
