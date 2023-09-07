@@ -1,22 +1,14 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-gray-200 gap-2">
-    <!-- Header -->
-    <div class="flex gap-10 m-2 items-center">
-      <NuxtLink :to="`/`">
-        <img src="/static/nlesc_logo.png" alt="Netherlands eScience Center Logo">
-      </NuxtLink>
-      <h1 class="text-2xl">
-        {{ story.category }}: {{ story.title }}
-      </h1>
-    </div>
+  <div class="flex flex-col w-screen h-screen bg-blue-50 gap-2">
+    <Banner />
 
     <!-- Other media types on chapterlevel -->
     <div class="flex flex-col h-full w-full">
       <!-- Chapter tabs -->
-      <div class="flex flex-auto no-wrap text-left gap-2 mb-2">
+      <div class="flex flex-auto no-wrap text-left bg-eSciencePurple gap-2 mb-2">
         <div v-for="(headline, idx) of headlines" :key="idx">
-          <div role="button" class="flex-grow bg-white rounded p-3 font-display" @click="toggleChapter(idx)">
-            <h2 class="text-2xl text-eSciencePurple">
+          <div role="button" class="flex-grow rounded p-3 font-display" @click="toggleChapter(idx)">
+            <h2 class="text-xl text-eSciencePurple">
               {{ headline }}
             </h2>
           </div>
