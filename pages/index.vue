@@ -5,9 +5,9 @@
     <div class="flex flex-col p-6 gap-2">
       <!-- categories -->
       <div v-for="category in categories" :key="category" class="flex flex-wrap gap-4 mb-8">
-        <h3 class="prose-xl w-full">
+        <h2 class="prose-2xl font-display font-bold text-eSciencePurple w-full pl-2">
           {{ category }}
-        </h3>
+        </h2>
         <!-- stories -->
         <StoryCard
           v-for="story in stories.filter(story => story.category === category)"
