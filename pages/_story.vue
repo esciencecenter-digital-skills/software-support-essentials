@@ -15,11 +15,11 @@
         </div>
       </div>
 
-      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto p-2 justify-end overflow-auto gap-2 h-full w-full">
+      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto  p-6 bg-eScienceBlue h-full w-full">
 
         <!-- Chapter media panel -->
         <!-- Presentation (revealjs) on story level -->
-        <div v-if="chapter.props.presentation" class="flex-auto p-4 w-full bg-white rounded overflow-auto">
+        <div v-if="chapter.props.presentation" class="flex-auto w-full overflow-auto">
           <div :id="'deck' + idx" class="reveal">
             <div class="slides">
               <section :data-markdown="getContent(chapter.props.presentation)" data-separator="^\r?\n---\r?\n$" data-separator-notes="^Note:" />

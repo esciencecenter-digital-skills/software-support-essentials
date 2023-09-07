@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-blue-50 overflow-auto">
+  <div class="flex flex-col w-screen bg-gentleBlue h-screen overflow-auto">
     <Banner />
     <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-end" placeholder="search">
-    <div class="flex flex-col m-2 gap-2">
+    <div class="flex flex-col p-6 gap-2">
       <!-- categories -->
       <div v-for="category in categories" :key="category" class="flex flex-wrap gap-4 mb-8">
         <h3 class="prose-xl w-full">

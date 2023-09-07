@@ -13,7 +13,9 @@ module.exports = {
     backgroundColor: theme => ({
       eSciencePurple: '#380339',
       eScienceBlue: '#009DDD',
-      eScienceYellow: '#FFB213'
+      eScienceYellow: '#FFB213',
+      eScienceWhite: '#FFFFFF',
+      gentleBlue: '#EFF6FF'
     })
   }
 }

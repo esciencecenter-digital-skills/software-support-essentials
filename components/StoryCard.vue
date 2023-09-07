@@ -2,7 +2,7 @@
   <NuxtLink :to="url">
     <!-- relative parent needed for absolute positioning of svg badges-->
     <div class="relative">
-      <div class="flex flex-row bg-white shadow-xl max-w-xl rounded-lg h-48">
+      <div class="flex flex-row bg-eScienceWhite shadow-xl max-w-xl rounded-lg h-48">
         <!-- story cards -->
         <div class="prose m-4">
           <h4>
