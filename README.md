@@ -4,22 +4,23 @@ On this repository, we are developing material for the course "Essentials for
 Research Software Support".
 
 The course website is [rendered via GitHub Pages](https://esciencecenter-digital-skills.github.io/software-support-essentials/).
-It is work in progress, and we welcome [new contributions](#contributing).
+It is work in progress, and we welcome [new contributions](CONTRIBUTING.md).
 
 ## Credits and licensing
 
 The infrastructure is based on the
 [storyboards](https://www.research-software.nl/software/storyboards) project.
-The source code (excluding the stories content) is licenced under Apache 2.
-The content of the stories is licenced under CC-BY 4.0.
+The source code (excluding the lesson content) is licenced under Apache 2.
+The content of the lessons is licenced under CC-BY 4.0.
 
 ## Infrastructure
 
 The website has been built with [Nuxt](https://nuxtjs.org), using
 [nuxt-content](https://content.nuxtjs.org/) for authoring stories and
 [tailwindcss](https://tailwindcss.com/docs/installation) + [tailwind
-typography](https://tailwindcss.com/docs/typography-plugin) for styling. It is
-hosted on [GitHub pages](https://nuxtjs.org/deployments/github-pages/).
+typography](https://tailwindcss.com/docs/typography-plugin) for styling.
+Slides are rendered with [reveal.js](https://revealjs.com/).
+It is hosted on [GitHub pages](https://nuxtjs.org/deployments/github-pages/).
 
 ## Contributing
 
