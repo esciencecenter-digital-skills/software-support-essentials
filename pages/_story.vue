@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-blue-50 gap-2">
+  <div class="flex flex-col w-screen h-screen bg-gentleBlue">
     <Banner />
 
     <!-- Other media types on chapterlevel -->
     <div class="flex flex-col h-full w-full">
       <!-- Chapter tabs -->
-      <div class="flex flex-auto no-wrap text-left bg-gentleBlue gap-2 pl-2">
+      <div class="flex flex-auto no-wrap text-left bg-gentleBlue">
         <div v-for="(headline, idx) of headlines" :key="idx">
-          <div role="button" class="flex-grow rounded p-4" @click="toggleChapter(idx)">
-            <h2 class="text-lg font-display font-semibold text-eSciencePurple hover:underline">
+          <div role="button" class="flex-grow text-eSciencePurple hover:bg-eScienceWhite hover:text-eScienceBlue p-4" @click="toggleChapter(idx)">
+            <h2 class="text-lg font-display font-semibold">
               {{ headline }}
             </h2>
           </div>
