@@ -277,15 +277,45 @@ where the `---` indicates the fence to the following slide.
 
 ## Rendering the materials locally
 
-To render the materials locally, you need to have [Node.js](https://nodejs.org/en/) installed.
-Then, run the following commands:
+www.esciencecenter.nl
 
-```bash
-npm install
-npm run dev
+info@esciencecenter.nl
+
+020 - 460 47 70
+
 ```
 
-The materials will be available at `http://localhost:3000/software-support-essentials/` (or a different port, if 3000 is already in use).
+## Serving the site locally
+
+The following instructions are the default instructions from a new Nuxt project.
+From your local clone, run the following:
+
+```bash
+# install dependencies
+$ npm install
+
+# Enable legacy OpenSSL provider (needed for node.js > version 16.x)
+$ export NODE_OPTIONS=--openssl-legacy-provider
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+```
+
+The materials will be available at [`http://localhost:3000/software-support-essentials/`](http://localhost:3000/software-support-essentials/) (or a different port, if 3000 is already in use).
 
 Modifications to the text should be rendered automatically with hot reload.
-Unfortunately, slides do not hot reload, and you will need to restart the server to see changes to slides.
+Unfortunately, slides do not always hot reload, and you may need to restart the server to see changes to slides.
+
+Serving with hot reload will also not refresh settings that are changed in `config.json`.
+To show these changes a complete rebuild should be done using `npm run build`.
+
+```bash
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# or to generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
