@@ -45,15 +45,19 @@
         </div>
 
         <!-- Image options -->
-        <div v-else-if="chapter.props.image" class="w-2/3 bg-white rounded">
-          <img v-if="!chapter.props.image.endsWith('html')" :src="getContent(chapter.props.image)" alt="story image" class="object-contain w-auto h-full max-w-full max-h-full mx-auto" @click="openBigImage">
+        <!-- <div v-else-if="chapter.props.image" class="w-2/3 bg-white rounded"> -->
+          <!-- <img v-if="!chapter.props.image.endsWith('html')" :src="getContent(chapter.props.image)" alt="story image" class="object-contain w-auto h-full max-w-full max-h-full mx-auto" @click="openBigImage">
           <iframe v-else :src="getContent(chapter.props.image)" frameborder="0" class="w-full h-full" />
           <div v-show="showBigImage" v-if="!chapter.props.image.endsWith('html')" class="fixed inset-0 flex bg-gray-900 bg-opacity-80" @click="closeBigImage">
             <div class="fixed bg-white shadow-2xl inset-5 z-40 flex justify-center" @click="closeBigImage">
               <img :src="getContent(chapter.props.image)" alt="story image" class="w-auto h-full object-contain">
             </div>
-          </div>
-        </div>
+          </div> -->
+        <Image
+          v-else-if="chapter.props.image"
+          :props="chapter.props">
+        </Image>
+        <!-- </div> -->
         <!-- Video from youtube -->
         <div v-else-if="chapter.props.video" class="w-2/3 bg-white h-full rounded flex-grow">
           <iframe class="object-contain w-full h-full max-w-full max-h-full mx-auto" :src="'https://www.youtube.com/embed/' + chapter.props.video" title="YouTube video player" frameborder="0" />
