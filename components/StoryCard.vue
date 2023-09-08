@@ -9,7 +9,7 @@
             {{ title }}
           </h3>
         </div>
-        <img :src="thumbnail" alt="storyboard preview" class="max-w-xs rounded-tr-3xl">
+        <img :src="thumbnail" alt="lesson icon" class="max-w-xs rounded-tr-3xl">
       </div>
     </div>
   </NuxtLink>
@@ -18,6 +18,23 @@
 <script>
 
 export default {
-  props: ['title', 'author', 'thumbnail', 'url']
+  props: {
+    title: {
+      type: String,
+      default: 'Title'
+    },
+    author: {
+      type: String,
+      default: 'Author'
+    },
+    thumbnail: {
+      type: String,
+      default: './static/nlesc-logo.svg'
+    },
+    url: {
+      type: String,
+      default: '/'
+    }
+  }
 }
 </script>

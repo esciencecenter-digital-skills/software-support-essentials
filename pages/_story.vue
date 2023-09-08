@@ -16,7 +16,6 @@
       </div>
 
       <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto p-4 bg-gentleBlue font-body h-full w-full">
-
         <!-- Chapter media panel -->
         <!-- Presentation (revealjs) on story level -->
         <div v-if="chapter.props.presentation" class="flex-auto w-full overflow-auto">
@@ -64,14 +63,13 @@
           </p>
         </div>
 
-            <!-- Chapter text (markdown) panel -->
+        <!-- Chapter text (markdown) panel -->
         <div v-if="!chapter.props.presentation && !chapter.props.widemd" class="flex-initial p-4 w-1/3 bg-white rounded overflow-auto">
-            <nuxt-content :document="chapter" class="prose mb-6" />
+          <nuxt-content :document="chapter" class="prose mb-6" />
         </div>
-
       </div>
     </div>
-  <Footer />
+    <Footer />
   </div>
 </template>
 
