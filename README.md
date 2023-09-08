@@ -24,7 +24,7 @@ It is hosted on [GitHub pages](https://nuxtjs.org/deployments/github-pages/).
 
 ## Contributing
 
-If you want to contribute to this product, fantastic!
+If you want to contribute to this project, fantastic!
 
 Please read the [contribution guidelines](CONTRIBUTING.md), with many details
 on what we need, and how to make your contribution.
