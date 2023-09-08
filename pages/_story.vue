@@ -3,9 +3,9 @@
     <Banner />
 
     <!-- Other media types on chapterlevel -->
-    <div class="flex flex-col h-full w-full">
+    <div class="flex flex-col h-full w-full bg-gentleBlue">
       <!-- Chapter tabs -->
-      <div class="flex flex-auto no-wrap text-left bg-gentleBlue">
+      <div class="flex flex-auto no-wrap text-left">
         <div v-for="(headline, idx) of headlines" :key="idx">
           <div role="button" class="flex-grow text-eSciencePurple hover:bg-eScienceWhite hover:text-eScienceBlue p-4" @click="toggleChapter(idx)">
             <h2 class="text-lg font-display font-semibold">
@@ -71,6 +71,7 @@
 
       </div>
     </div>
+  <Footer />
   </div>
 </template>
 
