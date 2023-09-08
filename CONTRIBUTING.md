@@ -1,12 +1,12 @@
 # Contributing to the Essentials
 
-## Thank you!
-
-In the Essentials for Research Software Support modules we try to provide information about everything that University support staff needs to know about research software.
+In the Essentials for Research Software Support modules we want to provide a comprehensive overview of the different aspects of research software support.
 This, as you can imagine, is no easy feat, and we need your help!
-First of all, therefore, thank you very much for your interest in this project, and for your willingness to contribute to it.
+So first of all, thank you very much for your interest in contributing to this project.
 
-## TLDR: what can I do?
+## TLDR
+
+### What can I do?
 
 - Contribute to the content discussion in the [chapter issues](https://github.com/esciencecenter-digital-skills/software-support-essentials/issues?q=is%3Aissue+is%3Aopen+label%3Astory), e.g. by listing good resources for information.
 - [Author a lesson](#elements-of-a-module), e.g. by:
@@ -17,24 +17,31 @@ First of all, therefore, thank you very much for your interest in this project, 
 - [Provide feedback](https://github.com/esciencecenter-digital-skills/software-support-essentials/issues) on the different subjects covered: what did we miss? Should something be restructured?
 - Contribute to the [video catalog](#videos) by volunteering to be interviewed.
 
+### How can I do it?
+
+If you want to contribute to the content: make a new issue or tackle an existing one, and create a PR with your changes from a fork or a branch.
+
+It is useful to [review the structure of the project](#directory-structure-and-content-tags) before you start.
+
 ## Target audience
 
 The target audience for this material is University support staff who are not themselves researchers or software engineers, but who support researchers and research software engineers in creating research software.
 On a practical level, this means that these modules do not need to be very technical.
 For example, a module on version control does not need to explain the details of Git and the different commands.
 What it does need to do is explain why version control is important, and why it matters particularly in a research context.
+A participant should walk away with a more elaborate vocabulary around a subject, knowledge on where and how to find more information, and motivation that they could transfer to others.
 
-Another segment of the target audience is university management: those who may be involved in creating policy around research software.
+Another segment of the target audience is university management: those who may be involved in creating university policy around research software.
 For this audience, too, the material does not need to be technical.
-What continues to matter is motivation and explanation of why certain things are important.
+What continues to matter is motivation.
 
 ## Philosophy
 
-Some essential principles guide the creation of this material:
+As you are contributing to this material, please keep a few principles in mind:
 
 ### The material should be broadly usable
 
-Both online, and offline; in a regular and a flipped classroom; and for self study.
+It should be ready for teaching both online and offline; in a regular and a flipped classroom; and even for self study.
 
 The modules in this repository will be used as lesson materials for a live audience, and provide a resource for self-study.
 Every module should therefore contain some essential classroom elements (e.g. slides, group exercises), as well as exercises that can be done individually, and reference material that can be read at home.
@@ -42,8 +49,8 @@ Every module should therefore contain some essential classroom elements (e.g. sl
 ### The modules should be easy to (re)use
 
 It is important that anybody can work with the material in this repository.
-Slides should therefore contain exhaustive notes for an instructor, which can also be used in self-study.
-Exercises should be clearly explained, and where possible, times should be given for different parts of the lesson, so that instructors can easily adapt the material to their own needs.
+Slides should therefore contain complete notes for an instructor, which can also be used in self-study.
+Exercises should be clearly explained, and where possible, times should be given for different parts of the lesson so an instructor can plan a workshop around these materials.
 
 ### Maintenance load should be kept to a minimum
 
@@ -64,7 +71,7 @@ A module can contain the following elements:
 - [exercises](#exercises), both for self study and for classroom use
 
 Ideally, all modules contain all elements.
-In the current state of the project, however, we are aware that modules shift and may be split up or combined with others.
+In the current state of the project, however, modules are still shifting and may be split up or combined with others.
 Therefore, the focus at this point is to accumulate material and to create a structure that makes sense.
 Completing all elements will be done at a future stage.
 
@@ -89,7 +96,7 @@ And optionally, consider adding:
 - Discussion points for the classroom
 
 Online resources are written in markdown, as chapters in the `modulename.md` file.
-Technical information about the structure of this file [is here](#the-modulename-file).
+Technical information about the structure of this file [is here](#the-modulenamemd-file).
 
 ### Exercises
 
@@ -110,7 +117,7 @@ If there are online resources that are relevant for the exercise, provide direct
 Finally, provide information on the expected outcome of the exercise.
 
 Exercises are written in markdown, as chapters in the `modulename.md` file.
-Technical information about the structure of this file [is here](#the-modulename-file).
+Technical information about the structure of this file [is here](#the-modulenamemd-file).
 
 ### Slides
 
@@ -136,7 +143,7 @@ Thus, if you are interested in recording a video, and there is a subject in our 
 The videos will be about 4-5 minutes long, will be shot at the center by our Communications team, and edited by a professional.
 The time investment for a video is approximately 3 hours, including interview preparation, recording, and shooting some B-roll footage.
 
-## Directory structure and content tagging
+## Directory structure and content tags
 
 All content lives in the `static/stories` directory.
 
@@ -172,11 +179,14 @@ thumbnail: "nlesc-dummy.png"
 The only important fields at this point are `category`, `title`, and `thumbnail`.
 
 The `category` field should be one of the categories mentioned on the [main page](https://esciencecenter-digital-skills.github.io/software-support-essentials/).
-The `title` field should be the title of the module.
+Any changes to the order of categories or their names should be set in the config.json file, in the root directory.
+The `title` field should be the title of the module; it will be shown on the main overview page.
 The `thumbnail` field should be the name of the thumbnail image, which should be placed in the `static/stories/_modulename/` directory.
 This image shows up on the index page.
 Eventually, we will use customized icons for this; currently, we use dummy images.
 Check any of the existing modules for an example.
+
+The `id`, `author` and `trl` (technical readiness level) properties are currently not used, but they are still here for legacy reasons.
 
 Note that the path to the thumbnail image is relative to the `_modulename/` directory, as opposed to any images inside the text.
 
@@ -214,10 +224,10 @@ Instead of `CHAPTERTYPE`, the following code can be used to refer to different t
 
 ### Slides with Reveal.js
 
-Slides are written in markdown, and should be placed in the `_modulename/` directory.
-The slides are embedded in the module using the `presentation` chapter type, as described [above](#chapter-types).
+Slides should be placed in the `_modulename/` directory.
+The slides are embedded as a chapter in the module's `modulename.md` file, using the `presentation` chapter type, as described [above](#chapter-types).
 
-The slides are rendered using [Reveal.js](https://revealjs.com/).
+The slides are written in Markdown, and rendered using [Reveal.js](https://revealjs.com/).
 
 #### Slide types
 
@@ -228,17 +238,19 @@ There are four different slide types:
 - "About us", `data-state="about"`
 - "Let's stay in touch", `data-state="keepintouch"`
 
-A slide is fenced by three dashes, and (optionally) an HTML comment that indicates the :
+A slide is fenced by three dashes, and (optionally) an HTML comment that indicates the slide type:
 
 ```markdown
 
 ---
 
-<!-- .slide: data-state="title" -->
+<!-- .slide: data-state="standard" -->
 
 ```
 
 Always keep an empty line before and after the slide fence.
+
+The dashes indicate the slide borders; the are therefore only necessary between the slides, and not at the beginning or end of a presentation.
 
 #### Slide content
 
@@ -275,7 +287,19 @@ Here is the text of a note.
 
 where the `---` indicates the fence to the following slide.
 
-## Rendering the materials locally
+#### Final slide
+
+The final slide should provide the contact information for the eScience Center.
+This is not hardcoded into the slides, so it should be provided explicitly.
+
+The code for the final slide is as follows:
+
+```markdown
+
+---
+
+<!-- .slide: data-state="keepintouch" -->
+
 
 www.esciencecenter.nl
 
