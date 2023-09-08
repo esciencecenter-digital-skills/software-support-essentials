@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto p-6 bg-gentleBlue font-body h-full w-full">
+      <div v-for="(chapter, idx) in chapters" v-show="idx===currentChapter" :key="idx" class="flex flex-auto justify-end overflow-auto p-4 bg-gentleBlue font-body h-full w-full">
 
         <!-- Chapter media panel -->
         <!-- Presentation (revealjs) on story level -->
