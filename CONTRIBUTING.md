@@ -202,7 +202,7 @@ A software management plan (SMP) can help you!
 ```
 
 The `headline` field is the title of the of the chapter tab.
-The `widemd` field should be set to 1; this indicates that the chapter is text-based.
+Meanwhile, `widemd=1` indicates that the chapter type is text-based. For more information on the various chapter types, see [below](#chapter-types).
 
 Between the colons, you can use markdown to format the text.
 
