@@ -211,7 +211,7 @@ Between the colons, you can use markdown to format the text.
 A standard chapter header looks like this:
 
 ```markdown
-:::Chapter{headline="Tab text" CHAPTERTYPE}
+:::Chapter{headline="Tab text" CHAPTERTYPE=VALUE}
 ```
 
 Instead of `CHAPTERTYPE=VALUE`, the following type codes and corresponding values can be used to refer to different types of content in the chapter and point to the corresponding contents:
