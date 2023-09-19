@@ -128,7 +128,7 @@ It is important to include notes, however brief, on ever slide.
 The notes are crucial for any instructor preparing to teach with the materials.
 They are also relevant for self-study participants, who can use the slides with accompanying notes to get a quick introduction to the subject.
 
-Slides are written in markdown, and rendered with Reveal.js.
+Slides are written in a markdown file, which should be placed in the _modulename/ directory and rendered with Reveal.js.
 Technical information about the structure of these files [is here](#slides-with-revealjs).
 
 ### Videos
