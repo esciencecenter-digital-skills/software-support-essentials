@@ -214,7 +214,7 @@ A standard chapter header looks like this:
 :::Chapter{headline="Tab text" CHAPTERTYPE}
 ```
 
-Instead of `CHAPTERTYPE`, the following code can be used to refer to different types of content in the chapter:
+Instead of `CHAPTERTYPE=VALUE`, the following type codes and corresponding values can be used to refer to different types of content in the chapter and point to the corresponding contents:
 
 - A text-based chapter: `widemd=1`
 - A presentation chapter, which embeds slides: `presentation="path/to/slides.md"`, where the path is relative to `_modulename/`
