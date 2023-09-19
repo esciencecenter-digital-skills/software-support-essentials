@@ -2,17 +2,14 @@
   <NuxtLink :to="url">
     <!-- relative parent needed for absolute positioning of svg badges-->
     <div class="relative">
-      <div class="flex flex-row bg-white shadow-xl max-w-xl rounded-lg h-48">
+      <div class="flex flex-row bg-eScienceWhite shadow-xl max-w-xl rounded-bl-3xl rounded-tr-3xl h-48">
         <!-- story cards -->
-        <div class="prose m-4">
-          <h4>
+        <div class="prose font-display m-4 mr-10">
+          <h3>
             {{ title }}
-          </h4>
-          <p>
-            {{ author }}
-          </p>
+          </h3>
         </div>
-        <img :src="thumbnail" alt="storyboard preview" class="max-w-xs rounded-r-lg">
+        <img :src="thumbnail" alt="lesson icon" class="max-w-xs rounded-tr-3xl">
       </div>
     </div>
   </NuxtLink>
@@ -21,6 +18,23 @@
 <script>
 
 export default {
-  props: ['title', 'author', 'thumbnail', 'url']
+  props: {
+    title: {
+      type: String,
+      default: 'Title'
+    },
+    author: {
+      type: String,
+      default: 'Author'
+    },
+    thumbnail: {
+      type: String,
+      default: './static/nlesc-logo.svg'
+    },
+    url: {
+      type: String,
+      default: '/'
+    }
+  }
 }
 </script>

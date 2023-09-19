@@ -1,16 +1,13 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-gray-200 overflow-auto">
+  <div class="flex flex-col w-screen bg-gentleBlue h-screen overflow-auto">
     <Banner />
-
-    <div class="flex flex-col m-2 gap-2">
-      <!-- search -->
-      <input v-model="query" type="search" class="w-1/3 m-4 p-2 self-center" placeholder="search"></input>
-
+    <input v-model="query" type="search" class="w-2/3 mt-4 mr-4 p-2 self-end" placeholder="search">
+    <div class="flex flex-col pt-4 pb-6 pl-6">
       <!-- categories -->
       <div v-for="category in categories" :key="category" class="flex flex-wrap gap-4 mb-8">
-        <h3 class="prose-xl w-full">
+        <h2 class="prose-2xl font-display font-bold text-eSciencePurple w-full pl-2">
           {{ category }}
-        </h3>
+        </h2>
         <!-- stories -->
         <StoryCard
           v-for="story in stories.filter(story => story.category === category)"
@@ -22,10 +19,13 @@
         />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import '../layouts/style.scss'
+
 export default {
   async asyncData (context) {
     const stories = await context.$content()
