@@ -25,15 +25,14 @@ It is useful to [review the structure of the project](#directory-structure-and-c
 
 ## Target audience
 
-The target audience for this material is University support staff who are not themselves researchers or software engineers, but who support researchers and research software engineers in creating research software.
+The target audience for this material is University management and support staff.
+University management taking part in courses involving these modules may be involved in creating university policy around research software.
+The University support staff targeted are not themselves researchers or software engineers, but they support researchers and research software engineers in creating research software.
+
 On a practical level, this means that these modules do not need to be very technical.
 For example, a module on version control does not need to explain the details of Git and the different commands.
 What it does need to do is explain why version control is important, and why it matters particularly in a research context.
 A participant should walk away with a more elaborate vocabulary around a subject, knowledge on where and how to find more information, and motivation that they could transfer to others.
-
-Another segment of the target audience is university management: those who may be involved in creating university policy around research software.
-For this audience, too, the material does not need to be technical.
-What continues to matter is motivation.
 
 ## Philosophy
 
