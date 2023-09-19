@@ -74,6 +74,30 @@ In the current state of the project, however, modules are still shifting and may
 Therefore, the focus at this point is to accumulate material and to create a structure that makes sense.
 Completing all elements will be done at a future stage.
 
+### Videos
+
+As this material is partly targeted at self-study participants, we explicitly want to include videos.
+In a video, we can provide extra motivation and color for a specific topic; motivation that otherwise would be conveyed by a teacher in a classroom setting.
+
+The videos are made from interviews with experts; likely our own RSE's at the Center, or if necessary, other experts in the field.
+We care a lot about conveying passion for the subject in these videos!
+Thus, if you are interested in recording a video, and there is a subject in our list of modules you feel particularly passionate about, please do [get in touch](https://www.esciencecenter.nl/team/dr-barbara-veede/).
+
+The videos will be about 4-5 minutes long, will be shot at the center by our Communications team, and edited by a professional.
+The time investment for a video is approximately 3 hours, including interview preparation, recording, and shooting some B-roll footage.
+
+### Slides
+
+Slides are essential when teaching a module in a classroom setting.
+They do not need to be long, however; a few slides to provide context and motivation is sufficient.
+
+It is important to include notes, however brief, on ever slide.
+The notes are crucial for any instructor preparing to teach with the materials.
+They are also relevant for self-study participants, who can use the slides with accompanying notes to get a quick introduction to the subject.
+
+Slides are written in a markdown file, which should be placed in the _modulename/ directory and rendered with Reveal.js.
+Technical information about the structure of these files [is here](#slides-with-revealjs).
+
 ### Online resources
 
 The online resources are the meat of the modules.
@@ -117,30 +141,6 @@ Finally, provide information on the expected outcome of the exercise.
 
 Exercises are written in markdown, as chapters in the `modulename.md` file.
 Technical information about the structure of this file [is here](#the-modulenamemd-file).
-
-### Slides
-
-Slides are essential when teaching a module in a classroom setting.
-They do not need to be long, however; a few slides to provide context and motivation is sufficient.
-
-It is important to include notes, however brief, on ever slide.
-The notes are crucial for any instructor preparing to teach with the materials.
-They are also relevant for self-study participants, who can use the slides with accompanying notes to get a quick introduction to the subject.
-
-Slides are written in a markdown file, which should be placed in the _modulename/ directory and rendered with Reveal.js.
-Technical information about the structure of these files [is here](#slides-with-revealjs).
-
-### Videos
-
-As this material is partly targeted at self-study participants, we explicitly want to include videos.
-In a video, we can provide extra motivation and color for a specific topic; motivation that otherwise would be conveyed by a teacher in a classroom setting.
-
-The videos are made from interviews with experts; likely our own RSE's at the Center, or if necessary, other experts in the field.
-We care a lot about conveying passion for the subject in these videos!
-Thus, if you are interested in recording a video, and there is a subject in our list of modules you feel particularly passionate about, please do [get in touch](https://www.esciencecenter.nl/team/dr-barbara-veede/).
-
-The videos will be about 4-5 minutes long, will be shot at the center by our Communications team, and edited by a professional.
-The time investment for a video is approximately 3 hours, including interview preparation, recording, and shooting some B-roll footage.
 
 ## Directory structure and content tags
 
