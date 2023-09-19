@@ -19,7 +19,7 @@ So first of all, thank you very much for your interest in contributing to this p
 
 ### How can I do it?
 
-If you want to contribute to the content: make a new issue or tackle an existing one, and create a PR with your changes from a fork or a branch.
+If you want to contribute to the content: look whether the issue you want to tackle [already exists](https://github.com/esciencecenter-digital-skills/software-support-essentials/issues) or make a [new issue](https://github.com/esciencecenter-digital-skills/software-support-essentials/issues/new), and [create a PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) with your changes from a fork or a branch.
 
 It is useful to [review the structure of the project](#directory-structure-and-content-tags) before you start.
 
