@@ -129,7 +129,7 @@ The notes are crucial for any instructor preparing to teach with the materials.
 They are also relevant for self-study participants, who can use the slides with accompanying notes to get a quick introduction to the subject.
 
 Slides are written in markdown, and rendered with Reveal.js.
-Technical information about the structure of this file [is here](#slides-with-revealjs).
+Technical information about the structure of these files [is here](#slides-with-revealjs).
 
 ### Videos
 
