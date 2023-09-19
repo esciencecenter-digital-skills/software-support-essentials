@@ -4,7 +4,7 @@
     <div class="relative">
       <div class="flex flex-row bg-eScienceWhite shadow-xl max-w-xl rounded-bl-3xl rounded-tr-3xl h-48">
         <!-- story cards -->
-        <div class="prose font-display m-4">
+        <div class="prose font-display m-4 mr-10">
           <h3>
             {{ title }}
           </h3>
