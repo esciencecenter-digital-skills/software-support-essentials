@@ -34,6 +34,7 @@ export default {
       .catch(e => console.log(e))
 
     const categories = stories
+      .filter(story => story.visibility === 'visible')
       .map(story => story.category)
       .filter((v, i, a) => a.indexOf(v) === i)
       .sort((a, b) => {
