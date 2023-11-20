@@ -57,7 +57,7 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    fullTextSearchFields: ['id', 'slug', 'title', 'author', 'thumbnail', 'category'],
+    fullTextSearchFields: ['id', 'slug', 'title', 'author', 'thumbnail', 'category', 'visibility'],
 
     dir: 'static/stories',
     markdown: {
