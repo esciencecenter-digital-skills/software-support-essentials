@@ -10,7 +10,7 @@
         </h2>
         <!-- stories -->
         <StoryCard
-          v-for="story in stories.filter(story => story.category === category)"
+          v-for="story in stories.filter(story => (story.category === category && story.visibility === 'visible'))"
           :key="story.id"
           :title="story.title"
           :author="story.author"
@@ -29,11 +29,12 @@ import '../layouts/style.scss'
 export default {
   async asyncData (context) {
     const stories = await context.$content()
-      .only(['id', 'slug', 'title', 'author', 'thumbnail', 'category'])
+      .only(['id', 'slug', 'title', 'author', 'thumbnail', 'category', 'visibility'])
       .fetch()
       .catch(e => console.log(e))
 
     const categories = stories
+      .filter(story => story.visibility === 'visible')
       .map(story => story.category)
       .filter((v, i, a) => a.indexOf(v) === i)
       .sort((a, b) => {
