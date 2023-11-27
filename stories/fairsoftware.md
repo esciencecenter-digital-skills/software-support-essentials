@@ -73,47 +73,6 @@ After reading the piece, discuss the following questions:
 
 :::
 
-:::Chapter{headline="Five recommendations" website="https://fair-software.eu/"}
-
-
-:::
-<!--
-
-:::Chapter{headline="Practical" widemd=1}
-## Five recommendations for FAIR software
-
-### [Use a publicly accessible repository with version control](https://fair-software.eu/recommendations/repository/)
-
-- Create open online repository on GitHub
-- Publish and version control your source code
-
-### [Add a license](https://fair-software.eu/recommendations/license)
-
-- How do I choose a license?
-- Online resources to help you choose a license
-- Add license to your repository
-
-### [Register your code in a community registry](https://fair-software.eu/recommendations/registry)
-
-- What is a software registry?
-- Why is it important to register your software?
-- How do you choose a registry?
-
-### [Enable citation of the software](https://fair-software.eu/recommendations/citation)
-
-- What is software citation?
-- Why is software citation important?
-- How to tell users how to cite your software?
-- What is DOI, CITATION.cff and CodeMeta?
-
-### [Use a software quality checklist](https://fair-software.eu/recommendations/checklist)
-
-- What is a software quality checklist?
-- Why should I use a cheklist?
-- What are the checklists I can use?
-
-::: -->
-
 
 :::Chapter{headline="Exercise: the Research Life Cycle" widemd=1}
 
@@ -121,7 +80,7 @@ After reading the piece, discuss the following questions:
 
 Take a look at the research life cycle below.
 
-![The Research Life Cycle](researchcycle.png)
+<img src="stories/_fairsoftware/researchcycle.png" alt="The Research Life Cycle" width="400"/>
 
 Think of a piece of research software you have used or developed.
 
@@ -220,9 +179,9 @@ Do you agree with their assessment?
 
 :::
 
-:::Chapter{headline="Exercise: Assessing FAIR software" widemd=1}
+:::Chapter{headline="Exercise: FAIR in practice" widemd=1}
 
-## Exercise: FAIR in practice
+## FAIR in practice
 
 Role playing exercise:
 One person presents the software, the other person gives feedback.
