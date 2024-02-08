@@ -10,7 +10,9 @@
         </h2>
         <!-- stories -->
         <StoryCard
-          v-for="story in stories.filter(story => (story.category === category && story.visibility === 'visible'))"
+          v-for="story in stories
+            .filter(story => (story.category === category && story.visibility === 'visible'))
+            .sort((a, b) => a.id - b.id)"
           :key="story.id"
           :title="story.title"
           :author="story.author"
