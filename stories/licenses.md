@@ -1,8 +1,8 @@
 ---
 id: 5
 trl: high
-category: Getting started
-title: Licenses
+category: Reusability
+title: Software licenses
 author: eScience Center
 thumbnail: "nlesc-dummy-1.png"
 visibility: visible
